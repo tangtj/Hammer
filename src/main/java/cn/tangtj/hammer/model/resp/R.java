@@ -7,20 +7,20 @@ public class R {
     public final static String SUCCESS_MSG = "Success";
 
 
-    public static R Ok() {
+    public static R ok() {
         return new R();
     }
 
     public static R ok(String msg){
-        return Ok().msg(msg);
+        return ok().msg(msg);
     }
 
     public static R ok(String msg,Object data){
-        return Ok().msg(msg).data(data);
+        return ok().msg(msg).data(data);
     }
 
     public static R ok(Object data){
-        return Ok().data(data);
+        return ok().data(data);
     }
 
     public static R error(String code, String msg, Object data) {
