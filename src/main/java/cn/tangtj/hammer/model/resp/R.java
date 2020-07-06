@@ -23,7 +23,14 @@ public class R {
         return Ok().data(data);
     }
 
-    public static R error(String code, String msg, String data) {
+    public static R error(String code, String msg, Object data) {
+        R r = new R();
+        return r.code(code)
+                .msg(msg)
+                .data(data);
+    }
+
+    public static R cust(String code,String msg,Object data){
         R r = new R();
         return r.code(code)
                 .msg(msg)
